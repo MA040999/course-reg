@@ -1,19 +1,29 @@
 {
-  "name": "react-quiz",
+  "name": "react-quiz-1812241",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "axios": "^0.21.1",
+    "concurrently": "^6.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.7",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "front-end": "react-scripts start",
+    "back-end": "nodemon server.js",
+    "dev": "concurrently \"yarn run back-end\" \"yarn run front-end\" ",
+    "heroku-postbuild": "npm install && npm run build",
     "build": "react-scripts build",
+    "start": "node server.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
